@@ -1,0 +1,162 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login Form</title> 
+    <title>Login</title> 
+  <link rel="stylesheet" href="styles.css"> 
+</head> 
+    <style> 
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background: linear-gradient(135deg, #ca87bcc9, #ff008c); 
+            font-family: Arial, sans-serif; 
+        } 
+ 
+        .login-container { 
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.075); 
+            backdrop-filter: blur(10px); 
+            border-radius: 20px; 
+            padding: 40px; 
+            display: flex; 
+            flex-direction: column; 
+            width: 300px; 
+            text-align: center; 
+        } 
+ 
+        .login-container input { 
+            background-color: rgba(255, 255, 255, 0.2); 
+            border: none; 
+            border-radius: 15px; 
+            padding: 15px; 
+            margin: 10px 0; 
+            color: white; 
+            font-size: 16px; 
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); 
+        } 
+ 
+        .login-container input:focus { 
+            outline: none; 
+            background-color: rgba(255, 255, 255, 0.3); 
+        } 
+ 
+        .login-container button { 
+            background-color: rgba(255, 255, 255, 0.2); 
+            border: none; 
+            border-radius: 15px; 
+            padding: 15px; 
+            color: white; 
+            font-size: 16px; 
+            cursor: pointer; 
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: background-color 0.3s ease; 
+            position: relative;
+            overflow: hidden;
+        } 
+        .login-container button:after{
+            background-color: rgba(255, 255, 255, 0.4);
+            content: '';
+            height: 80px;
+            left: -20px;
+            position:absolute;
+            top:0px;
+            transform: skewX(15deg);
+            width: 20px;
+            transition: transform 1s;
+        }.login-container button:hover::after{
+            transform: translate(100px);
+        }
+ 
+        .login-container button:hover { 
+            background-color: rgba(255, 255, 255, 0.3); 
+        } 
+        .login-container img {
+          
+            width: 60px;
+            margin-bottom: 20px;
+        }
+
+
+                .login-container input, button { 
+            margin: 20px; 
+        } 
+        .ball { 
+            width: 300px; 
+            height: 300px; 
+            border-radius: 50%; 
+            top: 50px; 
+            position: absolute; 
+            transform: translateY(-50%); 
+            background: linear-gradient(135deg, #ca87bcc9, #ff008c); 
+            animation: moveBall 10s infinite linear; 
+        } 
+        .ball1 { 
+            width: 300px; 
+            height: 300px; 
+            border-radius: 50%; 
+            left: 50px; 
+            position: absolute; 
+            transform: translateY(-50%); 
+            background: linear-gradient(135deg, #ca87bcc9, #ff008c); 
+            animation: moveBall1 10s infinite linear; 
+        } 
+        @keyframes moveBall { 
+            0% { 
+                top: -100px; 
+            } 
+            100% { 
+                top: 100vw; 
+            } 
+        } 
+        @keyframes moveBall1 { 
+            0% { 
+                left: -100px; 
+            } 
+            100% { 
+                left: 100vw; 
+            } 
+        } 
+
+        .input-animation::placeholder { 
+          
+            transition: transform 1s ease, opacity 1s ease;
+            transform-origin: left;
+        }
+
+        .input-animation:focus::placeholder {
+            transform: translateX(30px);
+            opacity: 0;
+        }
+
+
+        
+ 
+        
+         
+            
+    
+            
+    
+    </style> 
+    </style> 
+</head> 
+<body> 
+    <div ></div>
+    <div class="ball1"></div> 
+    <div class="ball"></div> 
+    <div class="login-container"> 
+        <img src="https://cdn.pixabay.com/photo/2017/06/13/12/54/profile-2398783_1280.png" alt="User Icon">
+       
+        <input class="input-animation" type="text" placeholder="User" required> 
+        <input class="input-animation" type="password" placeholder="Password" required> 
+        <a href="https://www.audi.pl/pl/web/pl.html"> 
+        <button>Login</button> 
+    </div> 
+</body> 
+</html>
